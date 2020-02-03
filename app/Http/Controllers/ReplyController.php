@@ -14,7 +14,7 @@ class ReplyController extends Controller
      */
     public function index()
     {
-        //
+        return Reply::latest->get();
     }
 
     /**
@@ -46,7 +46,7 @@ class ReplyController extends Controller
      */
     public function show(Reply $reply)
     {
-        //
+        return $reply;
     }
 
     /**

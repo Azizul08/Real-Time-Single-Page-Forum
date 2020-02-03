@@ -42,7 +42,7 @@ class CategoryController extends Controller
         $category->slug = str_slug($request->name);
         $category->save();
 
-        return response('Created', \Symfony\Component\HttpFoundation\Response::HTTP|_CREATED);
+        return response('Created', \Symfony\Component\HttpFoundation\Response::HTTP_CREATED);
     }
 
     /**
