@@ -82,8 +82,13 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Question $question)
+    // public function update(Request $request)
     {
-        //
+        // Question::update($request->all());
+        $question->update($request->all());
+
+        // dd($question);
+        return response('Update',Response::HTTP_ACCEPTED);
     }
 
     /**
